@@ -1,4 +1,6 @@
 # Brainfuck-Interpreter
+![Language](https://img.shields.io/badge/Language-C%2B%2B-blue)
+![Open Source](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)
 
 ## Description
 ![image](https://user-images.githubusercontent.com/66129931/203131944-bef76446-d040-4ae3-96dd-619f3da4d410.png)
