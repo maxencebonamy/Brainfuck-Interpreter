@@ -1,7 +1,7 @@
 #include "table.hpp"
 
 
-Table::Table() :
+Table::Table() noexcept :
     _table(),
     _ptr(_table.data())
 {
@@ -12,7 +12,7 @@ Table::Table() :
 }
 
 
-void Table::leftShift() {
+void Table::leftShift() noexcept {
     // If the pointer points to the first cell, it will point to the last one
     if (_ptr == _table.data()) {
         _ptr += _table.size() - 1;
@@ -24,7 +24,7 @@ void Table::leftShift() {
 }
 
 
-void Table::rightShift() {
+void Table::rightShift() noexcept {
     // If the pointer points to the last cell, it will point to the first one
     if (_ptr == _table.data() + _table.size() - 1) {
         _ptr = _table.data();
@@ -35,15 +35,15 @@ void Table::rightShift() {
     }
 }
 
-void Table::decrement() {
+void Table::decrement() noexcept {
     --(*_ptr);
 }
 
-void Table::increment() {
+void Table::increment() noexcept {
     ++(*_ptr);
 }
 
-void Table::print() {
+void Table::print() noexcept {
     // Displays the character associated with the value stored in the current cell in relation to the ASCII table
     std::cout << static_cast<char>(*_ptr);
 }
@@ -64,6 +64,6 @@ void Table::input() {
     }
 }
 
-bool Table::isNull() {
+bool Table::isNull() noexcept {
     return *_ptr == 0;
 }

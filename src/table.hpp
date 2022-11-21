@@ -11,7 +11,7 @@ public:
     /**
      * @brief Default Constructor
      */
-    Table();
+    Table() noexcept;
 
     // No copying or moving -> Rule of fives
     Table(const Table&) = delete;
@@ -23,27 +23,27 @@ public:
     /**
      * @brief Shift the pointer to the left (back to the last cell if necessary)
      */
-    void leftShift();
+    void leftShift() noexcept;
 
     /**
      * @brief Shift the pointer to the right (back to the first cell if necessary)
      */
-    void rightShift();
+    void rightShift() noexcept;
 
     /**
      * @brief Decrements the value stored in the cell pointed to by the pointer
      */
-    void decrement();
+    void decrement() noexcept;
 
     /**
      * @brief Increments the value stored in the cell pointed to by the pointer
      */
-    void increment();
+    void increment() noexcept;
 
     /**
      * @brief Displays the ASCII character stored in the cell pointed to by the pointer
      */
-    void print();
+    void print() noexcept;
 
     /**
      * @brief Stores the ASCII character entered by the user in the cell pointed to by the pointer
@@ -54,7 +54,7 @@ public:
      * @brief Check if the value in the cell pointed by the pointer is null
      * @return True only if the value is equal to 0
      */
-    bool isNull();
+    bool isNull() noexcept;
 
 private:
     // Table of 30,000 cells (Represents the memory)

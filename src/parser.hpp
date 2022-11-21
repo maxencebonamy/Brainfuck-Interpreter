@@ -34,7 +34,7 @@ public:
      * @return The instructions of the program in string form
      * @pre The instructions must be loaded correctly, otherwise they will be empty
      */
-    const std::string& getInstructions() const;
+    const std::string& getInstructions() const noexcept;
 
 private:
     /**
@@ -42,7 +42,7 @@ private:
      * @param c Char that will be checked
      * @return True only if the character corresponds to a brainfuck instruction
      */
-    static bool _isInstruction(char c) ;
+    static bool _isInstruction(char c) noexcept ;
 
     // All possible instructions in brainfuck
     static const std::string ALL_INSTRUCTIONS;

@@ -29,11 +29,11 @@ bool Parser::load() {
     return false;
 }
 
-const std::string& Parser::getInstructions() const {
+const std::string& Parser::getInstructions() const noexcept {
     return _instructions;
 }
 
-bool Parser::_isInstruction(char c) {
+bool Parser::_isInstruction(char c) noexcept {
     // If the character is not in the string of instructions,
     // this results in the index found being the constant std::string::npos
     return ALL_INSTRUCTIONS.find(c) != std::string::npos;
