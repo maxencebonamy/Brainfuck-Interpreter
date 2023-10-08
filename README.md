@@ -34,7 +34,7 @@ The 8 instructions used are as follows:
 2. Download the **.zip** archive and extract the files.
 3. Open a terminal from the folder **Brainfuck-Interpreter** and run the folowwing command:
 ```
-Brainfuck-Interpreter.exe examples/hello_world.bf
+./Brainfuck-Interpreter.exe examples/hello_world.bf
 ```
 
 ### Compile:
