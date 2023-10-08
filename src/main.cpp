@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
 
     // Checking the validity of the program
     if (!interpreter.checkInstructionsValidity()) {
-        std::cout << "Error: Program is not correct, it certainly comes from the brackets.\n";
+        std::cout << "Error: Program is not correct.\n";
         return 1;
     }
 

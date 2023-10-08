@@ -1,8 +1,7 @@
 add_rules("mode.debug", "mode.release")
 add_includedirs("src")
-set_allowedarchs("x64")
+set_rundir(".")
 
-target("brainfuck")
+target("main")
     set_kind("binary")
     add_files("src/**.cpp")
-    set_rundir(".")

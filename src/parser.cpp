@@ -12,13 +12,18 @@ bool Parser::load() {
     // Opening the file containing the program
     file.open(_filePath);
 
+    bool hasStarted = false;
     if (file.is_open() ) {
         char c;
         // Loop that runs through the file
         while (file) {
             c = static_cast<char>(file.get());
+            // Checks if the instructions are actual or just comments at the beginning of the file
+            if (c == '#' && !hasStarted) {
+                hasStarted = true;
+            }
             // Adds the character to the instructions after checking that it is indeed an instruction
-            if (_isInstruction(c)) {
+            if (hasStarted && _isInstruction(c)) {
                 _instructions += c;
             }
         }
